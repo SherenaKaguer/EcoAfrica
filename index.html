@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAfrica | Climatic Portal</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2913/2913520.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Finals.css">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-logo"><i class="fas fa-leaf"></i> <span>EcoAfrica</span></div>
+        <ul>
+            <li><a href="#" onclick="closeNav()"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#zones" onclick="closeNav()"><i class="fas fa-globe"></i> Climatic Zones</a></li>
+            <li><a href="#footer" onclick="closeNav()"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">☰ Menu</button>
+
+    <header class="hero">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1920&q=80" alt="African Savanna">
+            </div>
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1920&q=80" alt="African Jungle">
+            </div>
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1920&q=80" alt="Sahara Desert">
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>Climate in Africa</h1>
+            <p>A Journey Through the Continent's Diverse Ecosystems</p>
+            <a href="#zones" class="btn-main">Explore Zones</a>
+        </div>
+    </header>
+
+    <section id="zones" class="container">
+        <div class="section-title">
+            <h2>Major Climatic Zones</h2>
+            <p>Select a zone to view details and documentation.</p>
+        </div>
+
+        <div class="zones-grid">
+            <div class="zone-card" onclick="openZone('rainforest')">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Rainforest">
+                <div class="zone-info"><h3>Tropical Wet</h3><p>The Congo Basin...</p></div>
+            </div>
+            <div class="zone-card" onclick="openZone('savanna')">
+                <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d17a?auto=format&fit=crop&w=600&q=80" alt="Savanna">
+                <div class="zone-info"><h3>Tropical Wet & Dry</h3><p>The vast Savanna...</p></div>
+            </div>
+            <div class="zone-card" onclick="openZone('desert')">
+                <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=600&q=80" alt="Desert">
+                <div class="zone-info"><h3>Arid / Desert</h3><p>Sahara & Namib...</p></div>
+            </div>
+            <div class="zone-card" onclick="openZone('mediterranean')">
+                <img src="https://images.unsplash.com/photo-1516245556508-7d60d4ff0f39?auto=format&fit=crop&w=600&q=80" alt="Coastline">
+                <div class="zone-info"><h3>Mediterranean</h3><p>Coastal Regions...</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="zoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">© 2026 EcoAfrica</div>
+            <div class="footer-contacts">
+                <span><i class="fas fa-user"></i> Sherena Kaguer</span>
+                <span><i class="fas fa-phone"></i> <a href="tel:0795367883">0795367883</a></span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:sherenakaguer6@gmail.com">Email Us</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Finals.js"></script>
+</body>
+</html>
